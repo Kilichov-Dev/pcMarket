@@ -1,7 +1,11 @@
 package uz.pdp.pcmarket.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import uz.pdp.pcmarket.entity.Order;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import uz.pdp.pcmarket.entity.Orders;
+import uz.pdp.pcmarket.projection.CustomOrder;
 
-public interface OrderRepository extends JpaRepository<Order,Integer> {
+@RepositoryRestResource(path = "order", collectionResourceRel = "list", excerptProjection = CustomOrder.class)
+
+public interface OrderRepository extends JpaRepository<Orders,Integer> {
 }
