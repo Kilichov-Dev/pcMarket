@@ -15,6 +15,7 @@ public class Users {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String email;
+    @Column(unique = true,nullable = false)
     private String phoneNumber;
     private String lastName;
     private String firstName;
