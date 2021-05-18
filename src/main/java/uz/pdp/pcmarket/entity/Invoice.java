@@ -5,18 +5,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Charachter {
+public class Invoice {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToMany
-    private List<Detail> detail;
     @ManyToOne
-    private Product product;
+    private Users customer;
+    @ManyToOne
+    private Orders orders;
+    private double price;
+    private Date create;
+    private Date dueDate;
+
 }
+
+

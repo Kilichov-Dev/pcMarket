@@ -5,11 +5,13 @@ import uz.pdp.pcmarket.entity.Charachter;
 import uz.pdp.pcmarket.entity.Detail;
 import uz.pdp.pcmarket.entity.Product;
 
+import java.util.List;
+
 @Projection(types = Charachter.class)
 public interface CustomCharachters {
     Integer getId();
 
-    Detail getDetail();
+    List<Detail> getDetail();
 
     Product getProduct();
 }

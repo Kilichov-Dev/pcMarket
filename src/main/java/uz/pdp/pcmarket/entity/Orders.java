@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -18,4 +19,7 @@ public class Orders {
     @ManyToOne
     private Users customer;
     private Date date;
+    @OneToMany
+    private List<Product> product;
+
 }

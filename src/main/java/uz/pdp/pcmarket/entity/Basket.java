@@ -11,12 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Charachter {
+public class Basket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToMany
-    private List<Detail> detail;
     @ManyToOne
-    private Product product;
+    private Users custom;
+    @ManyToMany
+    private List<Product> product;
 }
