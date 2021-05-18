@@ -18,7 +18,7 @@ public class Invoice {
     private Integer id;
     @ManyToOne
     private Users customer;
-    @ManyToOne
+    @OneToOne
     private Orders orders;
     private double price;
     private Date create;
